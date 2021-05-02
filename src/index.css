@@ -1,13 +1,114 @@
-body {
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'montseratt', sans-serif;
+  color: white;
+}
+
+main {
+  height: 100vh;
+  
+  padding: 25px;
+  
+}
+
+
+.app {
+  background-color: #282c34;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s, ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: white;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  background-color: rgb(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". city city ."
+    ". city-input city-input ."
+    ". country country ."
+    ". country-input country-input ."
+    ". results results .";
+}
+.city { 
+  text-align: center; 
+  grid-area: city;
+ 
+}
+.city-input { 
+  grid-area: city-input; 
+  margin-bottom: 10px;
+}
+.country {
+  text-align: center;  
+  grid-area: country;
+  
+}
+.country-input { 
+  margin-bottom: 5px;
+  grid-area: country-input;
+  
+}
+
+.results{
+  grid-area: results;
+}
+
+.app.cold {
+  background-image: url('./Assests/images/victoire-joncheray-6JZ-oPjbF9s-unsplash.jpg');
+  background-size: cover;
+  background-position: bottom;
+  color: #08C5F5;
+  text-shadow: 2px 2px black;
+
+  
+}
+
+.app.hot {
+
+  background: linear-gradient(to bottom, rgb(0, 252, 235, 0.7), rgb(241, 0, 162, 0.5)),
+  url('./Assests/images/muhammad-saushan-O06Q1PiwOfA-unsplash.jpg');
+  background-size: cover;
+  background-position: bottom;
+  color: #f9ff33;
+  text-shadow: 2px 2px #dd219e;
+ 
+}
+
+.app.warm {
+  background: linear-gradient(to bottom, rgb(255, 69, 24, 0.5),  rgb(246, 255, 0, 0.2)),  
+  url('./Assests/images/masaaki-komori-Z8TQv3yKQd4-unsplash.jpg');
+  background-size: cover;
+  background-position: bottom;
+   color: white;
+  text-shadow: 2px 2px black;
+  
+}
+
+
+
+
+.search-bar {
+height: 40px;
+width: 100%;
+padding: 5px;
+
 }
