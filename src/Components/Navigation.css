@@ -1,0 +1,26 @@
+.navBar {
+    top: 0;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+
+   
+    
+
+
+}
+
+.navBar ul {
+    list-style: none;
+   
+  
+   
+}
+
+.navBar li {
+    margin-left: 20px;
+    
+    
+}
+
+
